@@ -1,0 +1,569 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --main-color: #a2fee9;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "Cairo", sans-serif;
+  font-size: 16px;
+  direction: rtl;
+}
+body.active {
+  direction: ltr;
+}
+.page {
+  overflow-x: hidden;
+}
+
+/* Start Component */
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+@media (min-width: 1000px) {
+  .container {
+    width: 980px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+
+.language {
+  padding: 10px 15px;
+  font-size: 1em;
+  border-radius: 5px;
+  background: #333;
+  align-items: center;
+  box-shadow: -5px -5px 15px #444, 5px 5px 15px #222, inset 5px 5px 10px #444,
+    inset -5px -5px 10px #222;
+  font-family: "Damion", cursive;
+  cursor: pointer;
+  border: none;
+  color: rgb(161, 161, 161);
+  transition: 500ms;
+}
+
+.language:hover {
+  box-shadow: -5px -5px 15px #444, 5px 5px 15px #222, inset 5px 5px 10px #222,
+    inset -5px -5px 10px #444;
+  color: #d6d6d6;
+  transition: 500ms;
+}
+
+/* search input */
+/* From Uiverse.io by Gautammsharma */
+.input__container--variant {
+  margin: auto;
+  background: linear-gradient(to bottom, #f3fff9, #f3fff9);
+  border-radius: 20px;
+  border: 5px solid #07372c;
+  max-width: 500px;
+  padding: 1em;
+  text-align: center;
+}
+
+.shadow__input--variant {
+  filter: blur(25px);
+  border-radius: 30px;
+  background-color: #f3fff9;
+  opacity: 0.5;
+}
+
+.input__button__shadow--variant {
+  border-radius: 15px;
+  background-color: #07372c;
+  padding: 15px 10px;
+  cursor: pointer;
+  border-bottom: 3px solid #000;
+}
+@media (max-width: 600px) {
+  .input__button__shadow--variant {
+    width: 90%;
+  }
+}
+.input__button__shadow--variant:hover {
+  background-color: #3c6659;
+}
+
+.input__search--variant {
+  width: 14em;
+  align-items: center;
+  outline: none;
+  border: none;
+  margin-bottom: 10px;
+  border-bottom: 2px solid #8c8c8c;
+  border-radius: 5px;
+  padding: 0.8em;
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #002019;
+  background-color: transparent;
+}
+
+.input__search--variant::placeholder {
+  color: #002019;
+  opacity: 0.7;
+}
+
+/* search input */
+/* From Uiverse.io by mobinkakei */
+#wifi-loader {
+  --background: #62abff;
+  --front-color: #4f29f0;
+  --back-color: #c3c8de;
+  --text-color: #414856;
+  width: 64px;
+  height: 64px;
+  border-radius: 50px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#wifi-loader svg {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#wifi-loader svg circle {
+  position: absolute;
+  fill: none;
+  stroke-width: 6px;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  transform: rotate(-100deg);
+  transform-origin: center;
+}
+
+#wifi-loader svg circle.back {
+  stroke: var(--back-color);
+}
+
+#wifi-loader svg circle.front {
+  stroke: var(--front-color);
+}
+
+#wifi-loader svg.circle-outer {
+  height: 86px;
+  width: 86px;
+}
+
+#wifi-loader svg.circle-outer circle {
+  stroke-dasharray: 62.75 188.25;
+}
+
+#wifi-loader svg.circle-outer circle.back {
+  animation: circle-outer135 1.8s ease infinite 0.3s;
+}
+
+#wifi-loader svg.circle-outer circle.front {
+  animation: circle-outer135 1.8s ease infinite 0.15s;
+}
+
+#wifi-loader svg.circle-middle {
+  height: 60px;
+  width: 60px;
+}
+
+#wifi-loader svg.circle-middle circle {
+  stroke-dasharray: 42.5 127.5;
+}
+
+#wifi-loader svg.circle-middle circle.back {
+  animation: circle-middle6123 1.8s ease infinite 0.25s;
+}
+
+#wifi-loader svg.circle-middle circle.front {
+  animation: circle-middle6123 1.8s ease infinite 0.1s;
+}
+
+#wifi-loader svg.circle-inner {
+  height: 34px;
+  width: 34px;
+}
+
+#wifi-loader svg.circle-inner circle {
+  stroke-dasharray: 22 66;
+}
+
+#wifi-loader svg.circle-inner circle.back {
+  animation: circle-inner162 1.8s ease infinite 0.2s;
+}
+
+#wifi-loader svg.circle-inner circle.front {
+  animation: circle-inner162 1.8s ease infinite 0.05s;
+}
+
+#wifi-loader .text {
+  position: absolute;
+  bottom: -40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: lowercase;
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: 0.2px;
+}
+
+#wifi-loader .text::before,
+#wifi-loader .text::after {
+  content: attr(data-text);
+}
+
+#wifi-loader .text::before {
+  color: var(--text-color);
+}
+
+#wifi-loader .text::after {
+  color: var(--front-color);
+  animation: text-animation76 3.6s ease infinite;
+  position: absolute;
+  left: 0;
+}
+
+@keyframes circle-outer135 {
+  0% {
+    stroke-dashoffset: 25;
+  }
+
+  25% {
+    stroke-dashoffset: 0;
+  }
+
+  65% {
+    stroke-dashoffset: 301;
+  }
+
+  80% {
+    stroke-dashoffset: 276;
+  }
+
+  100% {
+    stroke-dashoffset: 276;
+  }
+}
+
+@keyframes circle-middle6123 {
+  0% {
+    stroke-dashoffset: 17;
+  }
+
+  25% {
+    stroke-dashoffset: 0;
+  }
+
+  65% {
+    stroke-dashoffset: 204;
+  }
+
+  80% {
+    stroke-dashoffset: 187;
+  }
+
+  100% {
+    stroke-dashoffset: 187;
+  }
+}
+
+@keyframes circle-inner162 {
+  0% {
+    stroke-dashoffset: 9;
+  }
+
+  25% {
+    stroke-dashoffset: 0;
+  }
+
+  65% {
+    stroke-dashoffset: 106;
+  }
+
+  80% {
+    stroke-dashoffset: 97;
+  }
+
+  100% {
+    stroke-dashoffset: 97;
+  }
+}
+
+@keyframes text-animation76 {
+  0% {
+    clip-path: inset(0 100% 0 0);
+  }
+
+  50% {
+    clip-path: inset(0);
+  }
+
+  100% {
+    clip-path: inset(0 0 0 100%);
+  }
+}
+
+/* ----------- */
+/* -------------- */
+/* End Component */
+header {
+  background-color: #1b1b1b;
+  border-top: 6px solid #07372c;
+  border-bottom: 6px solid #07372c;
+}
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+}
+
+header .container .logo h1 {
+  margin: 0;
+  color: #a2fee9;
+}
+
+header .container .menu {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+@media (max-width: 800px) {
+  header .container .logo h1 {
+    font-size: 1.5em;
+  }
+  header .container .menu {
+    gap: 10px;
+  }
+}
+/* header is end  */
+/* main start  */
+.date {
+  z-index: 2;
+  color: #09a37f;
+  position: absolute;
+  top: 10px;
+  left: 8px;
+  background-color: #0000006f;
+  padding: 10px 15px;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+@media (max-width: 700px) {
+  .date {
+    padding: 10px;
+  }
+}
+.date #hijriDate {
+  margin-bottom: 5px;
+  font-size: 1em;
+}
+
+main {
+  position: relative;
+  height: 75vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  background-image: url("./adan.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: bottom;
+}
+main::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+  background-color: #000000cb;
+}
+main .intrduoce {
+  z-index: 2;
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+main h1 {
+  font-size: 3.5em;
+  color: #0adead;
+}
+
+main p {
+  font-size: 1.7em;
+  color: #fff;
+}
+@media (max-width: 700px) {
+  main h1 {
+    font-size: 2.8em;;
+  }
+  main p {
+    font-size: 1.5em;
+  }
+}
+main p .sea {
+  display: block;
+  background-color: #09a37f;
+  color: #ffffff;
+  text-decoration: none;
+  width: fit-content;
+  font-weight: 700;
+  cursor: pointer;
+  margin: 10px auto 0;
+  padding: 6px 11px;
+  border-radius: 10px;
+}
+main p .sea:hover {
+  transition: 400ms;
+  text-decoration: underline;
+  background: color-mix(in srgb, #0adead 30%, #000 70%);
+  -webkit-transition: 400ms;
+  -moz-transition: 400ms;
+  -ms-transition: 400ms;
+  -o-transition: 400ms;
+}
+/* main End  */
+/* search-statement Start*/
+#search-statement {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  background-color: #01110e;
+  position: relative;
+}
+#search-statement::after {
+  content: "";
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  position: absolute;
+  width: 100px;
+  height: 8px;
+  background: linear-gradient(to right, #09a37f, #033328);
+  border-radius: 30px;
+}
+
+#search-statement .time-statement {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  width: fit-content;
+  gap: 20px;
+  padding: 20px;
+  border-radius: 25px;
+  border: 7px solid #0adead;
+  margin-top: 30px;
+  background-color: #fff;
+  transition: 500ms ease-in-out;
+  -webkit-transition: 500ms ease-in-out;
+  -moz-transition: 500ms ease-in-out;
+  -ms-transition: 500ms ease-in-out;
+  -o-transition: 500ms ease-in-out;
+}
+#search-statement .time-statement:hover {
+  border-color: #07372c;
+  box-shadow: 1px 1px 10px #0adead;
+}
+#search-statement .Prayer-time {
+  background-color: #0adead;
+  color: #222;
+  cursor: pointer;
+  border-radius: 50%;
+  height: 130px;
+  width: 130px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  transition: 300ms ease-in-out;
+  -webkit-transition: 300ms ease-in-out;
+  -moz-transition: 300ms ease-in-out;
+  -ms-transition: 300ms ease-in-out;
+  -o-transition: 300ms ease-in-out;
+}
+
+#search-statement .Prayer-time:hover {
+  background: #07372c;
+  color: white;
+}
+/* search-statement End */
+
+footer {
+  font-size: 1.3em;
+  height: 60px;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #0adead;
+  color: #333;
+  font-weight: bold;
+}
+
+/* تنسيقات المدن المتشابهة */
+.similar-cities {
+  margin: 10px auto;
+  max-width: 530px;
+  background: #f5f5f5;
+  border-radius: 10px;
+  padding: 10px;
+  box-shadow: 3px 3px 27px rgb(5 113 88);
+  direction: ltr;
+}
+
+.similar-city {
+  padding: 8px 15px;
+  margin: 5px 0;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-radius: 3px;
+}
+.similar-city:not(:last-child) {
+  border-bottom: 2px solid #09a07d45;
+}
+
+.similar-city:hover {
+  background: #0adead;
+  color: #fff;
+}
+
+/* تنسيقات للغة الإنجليزية */
+body.active .similar-cities {
+  direction: ltr;
+  text-align: left;
+}

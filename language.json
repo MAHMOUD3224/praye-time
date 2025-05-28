@@ -1,0 +1,36 @@
+[
+    {
+        "logoName": "Adan",
+        "language":"Arabic",
+        "Prayer times": "Prayer times",
+        "desc": "Prayer times according to cities",
+        "searchNow":"Search Now",
+        "placholder":"Search...",
+        "Fajr":"Fajr",
+        "Sunrise":"Sunrise",
+        "Dhuhr":"Dhuhr",
+        "Asr":"Asr",
+        "Maghrib":"Maghrib",
+        "Isha":"Isha",
+        "footer":"Developed By ",
+        "link":"Mahmoud Rashad",
+        "searching":"searching"
+    },
+    {
+        "logoName": "ألأذأن",
+        "language":"English",
+        "Prayer times": "موأقيت ألصلأه",
+        "desc": "موأقيت ألصلأه علي حسب ألمدن",
+        "searchNow":"أبحث ألان",
+        "placholder":"بحث...",
+        "Fajr":"ألفجر",
+        "Sunrise":"ألشروق",
+        "Dhuhr":"ألظهر",
+        "Asr":"ألعصر",
+        "Maghrib":"ألمغرب",
+        "Isha": "ألعشاء",
+        "footer": "تم التطوير بواسطة",
+        "link":"محمود رشاد",
+        "searching": "جاري ألبحث..."
+    }
+]

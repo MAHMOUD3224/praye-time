@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Prayer Time" />
+    <meta name="keywords" content="Prayer Time" />
+
+    <meta name="msapplication-TileColor" content="#0adead" />
+    <meta name="theme-color" content="#0adead" />
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap"
+      rel="stylesheet"
+    />
+    <!-- google fonts -->
+    <link rel="stylesheet" href="style.css" />
+    <title>Prayer Time</title>
+  </head>
+  <body>
+    <div class="page">
+      <header>
+        <div class="container">
+          <div class="logo">
+            <!-- Adhan -->
+            <h1 class="Adhan">الاذان</h1>
+          </div>
+          <div class="menu">
+            <button class="language">English</button>
+          </div>
+        </div>
+      </header>
+      <main>
+        <div class="intrduoce">
+          <h1 class="moaquet" aria-live="polite" tabindex="0">موأقيت ألصلأه</h1>
+          <p class="p" aria-live="polite" tabindex="0">
+            موأقيت ألصلأه علي حسب ألمدن
+            <a href="#search-inp" class="sea" aria-live="polite" tabindex="0"
+              >أبحث ألان</a
+            >
+          </p>
+        </div>
+        <div class="date">
+          <h3 id="currentTime">00:00</h3>
+          <h3 id="hijriDate">00-00-0000 هـ</h3>
+        </div>
+      </main>
+
+      <section id="search-statement">
+        <div class="container">
+          <!-- From Uiverse.io by Gautammsharma -->
+          <div
+            class="input__container input__container--variant"
+            id="search-inp"
+          >
+            <div class="shadow__input shadow__input--variant"></div>
+            <input
+              type="text"
+              name="text"
+              class="input__search input__search--variant"
+              placeholder="بحث..."
+            />
+            <button
+              class="input__button__shadow input__button__shadow--variant"
+              id="submit"
+            >
+              <svg
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 20 20"
+                height="1.5em"
+                width="13em"
+              >
+                <path
+                  d="M4 9a5 5 0 1110 0A5 5 0 014 9zm5-7a7 7 0 104.2 12.6.999.999 0 00.093.107l3 3a1 1 0 001.414-1.414l-3-3a.999.999 0 00-.107-.093A7 7 0 009 2z"
+                  fill-rule="evenodd"
+                  fill="#FFF"
+                ></path>
+              </svg>
+            </button>
+          </div>
+          <h1
+            class="cityName"
+            style="
+              color: #fff;
+              text-align: center;
+              margin-top: 20px;
+              font-size: 30px;
+            "
+          ></h1>
+          <div class="time-statement">
+            <div class="Prayer-time">
+              <h1 class="Fajr-title" tabindex="0" aria-live="polite">ألفجر</h1>
+              <p class="time Fajr" tabindex="0" aria-live="polite"></p>
+            </div>
+            <div class="Prayer-time">
+              <h1 class="Sunrise-title" tabindex="0" aria-live="polite">ألشروق</h1>
+              <p class="time Sunrise" tabindex="0" aria-live="polite"></p>
+            </div>
+            <div class="Prayer-time">
+              <h1 class="Dhuhr-title" tabindex="0" aria-live="polite">ألظهر</h1>
+              <p class="time Dhuhr" tabindex="0" aria-live="polite"></p>
+            </div>
+            <div class="Prayer-time">
+              <h1 class="Asr-title" tabindex="0" aria-live="polite">ألعصر</h1>
+              <p class="time Asr" tabindex="0" aria-live="polite"></p>
+            </div>
+            <div class="Prayer-time">
+              <h1 class="Maghrib-title" tabindex="0" aria-live="polite">ألمغرب</h1>
+              <p class="time Maghrib" tabindex="0" aria-live="polite"></p>
+            </div>
+            <div class="Prayer-time">
+              <h1 class="Isha-title" tabindex="0" aria-live="polite">ألعشاء</h1>
+              <p class="time Isha" tabindex="0" aria-live="polite"></p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <footer>
+        تم التطوير بواسطة
+        <a
+          href="https://www.linkedin.com/in/mahmoud-rashad-2353b0252/"
+          target="_blank"
+          style="color: #000000; margin-right: 2px; margin-left: 2px"
+          >محمود رشاد
+        </a>
+      </footer>
+    </div>
+
+    <!-- From Uiverse.io by mobinkakei  Loading Animation-->
+    <!-- <div id="wifi-loader">
+    <svg class="circle-outer" viewBox="0 0 86 86">
+        <circle class="back" cx="43" cy="43" r="40"></circle>
+        <circle class="front" cx="43" cy="43" r="40"></circle>
+        <circle class="new" cx="43" cy="43" r="40"></circle>
+    </svg>
+    <svg class="circle-middle" viewBox="0 0 60 60">
+        <circle class="back" cx="30" cy="30" r="27"></circle>
+        <circle class="front" cx="30" cy="30" r="27"></circle>
+    </svg>
+    <svg class="circle-inner" viewBox="0 0 34 34">
+        <circle class="back" cx="17" cy="17" r="14"></circle>
+        <circle class="front" cx="17" cy="17" r="14"></circle>
+    </svg>
+    <div class="text" data-text="Searching"></div>
+</div> -->
+
+    <script src="touches.js"></script>
+  </body>
+</html>
+
+
