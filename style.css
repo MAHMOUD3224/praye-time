@@ -195,15 +195,23 @@ body.active {
 /* search input */
 /* From Uiverse.io by Gautammsharma */
 .input__container--variant {
-  margin: auto;
-  background: linear-gradient(to bottom, #f3fff9, #f3fff9);
-  border-radius: 20px;
-  border: 5px solid #07372c;
-  max-width: 500px;
-  padding: 1em;
-  text-align: center;
+    margin: auto;
+    background: linear-gradient(to bottom, #f3fff9, #f3fff9);
+    max-width: 600px;
+    text-align: center;
+    display: flex;
+    padding: 0.4em;
+    border-radius: 6px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    -ms-border-radius: 6px;
+    -o-border-radius: 6px;
 }
-
+@media (max-width: 600px) {
+  .input__container--variant {
+    flex-direction: column;
+  }
+}
 .shadow__input--variant {
   filter: blur(25px);
   border-radius: 30px;
@@ -212,34 +220,32 @@ body.active {
 }
 
 .input__button__shadow--variant {
-  border-radius: 15px;
-  background-color: #07372c;
-  padding: 15px 10px;
-  cursor: pointer;
-  border-bottom: 3px solid #000;
+    background-color: #07372c;
+    padding: 1.2em 0.8em;
+    cursor: pointer;
+    border: none;
+    border-radius: 6px;
+    border-bottom: 3px solid #07372c;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    -ms-border-radius: 6px;
+    -o-border-radius: 6px;
 }
-@media (max-width: 600px) {
-  .input__button__shadow--variant {
-    width: 90%;
-  }
-}
+
 .input__button__shadow--variant:hover {
   background-color: #3c6659;
 }
 
 .input__search--variant {
-  width: 14em;
-  align-items: center;
-  outline: none;
-  border: none;
-  margin-bottom: 10px;
-  border-bottom: 2px solid #8c8c8c;
-  border-radius: 5px;
-  padding: 0.8em;
-  font-size: 1.2em;
-  font-weight: bold;
-  color: #002019;
-  background-color: transparent;
+    align-items: center;
+    outline: none;
+    width: 100%;
+    border: none;
+    padding: 1.2em 0.8em;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #002019;
+    background-color: transparent;
 }
 
 .input__search--variant::placeholder {
@@ -290,7 +296,7 @@ header .container .menu {
   position: absolute;
   top: 10px;
   left: 8px;
-  background-color: #0000006f;
+  background-color: #000000;
   padding: 10px 15px;
   border-radius: 10px;
   -webkit-border-radius: 10px;
@@ -450,21 +456,28 @@ main p .sea:hover {
 /* search-statement End */
 
 footer {
-  font-size: 1.3em;
-  height: 60px;
-  margin: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #0adead;
-  color: #333;
-  font-weight: bold;
+    font-size: 1.3em;
+    height: 60px;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #000000;
+    color: #0adead;
+    font-weight: bold;
+    box-shadow: 0px 20px 45px #026b53;
+    position: relative;
+}
+footer a{
+  color: #0adead; 
+  margin-right: 2px; 
+  margin-left: 2px;
 }
 
 /* تنسيقات المدن المتشابهة */
 .similar-cities {
   margin: 10px auto;
-  max-width: 530px;
+  max-width: 600px;
   background: #f5f5f5;
   border-radius: 10px;
   padding: 10px;
@@ -477,15 +490,18 @@ footer {
   margin: 5px 0;
   cursor: pointer;
   transition: all 0.3s ease;
-  border-radius: 3px;
+  font-size: 1.3em;
+  font-weight: 600;
+  color: #222;
 }
 .similar-city:not(:last-child) {
-  border-bottom: 2px solid #09a07d45;
+  border-bottom: 2px solid #eae6e6;
 }
 
 .similar-city:hover {
-  background: #0adead;
+  background: #07372c;
   color: #fff;
+  border-radius: 5px;
 }
 
 /* تنسيقات للغة الإنجليزية */

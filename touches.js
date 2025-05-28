@@ -238,7 +238,7 @@ function switchLanguage() {
         // تحديث الـ footer
         const footer = document.querySelector("footer");
         if (footer) {
-          footer.innerHTML = `${langData.footer} <a href="https://www.linkedin.com/in/mahmoud-rashad-2353b0252/" target="_blank" style="color: #000000; margin-right: 2px; margin-left: 2px;">${langData.link}</a>`;
+          footer.innerHTML = `${langData.footer} <a href="https://www.linkedin.com/in/mahmoud-rashad-2353b0252/" target="_blank">${langData.link}</a>`;
         }
 
         // تحديث زر اللغة
